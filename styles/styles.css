@@ -15,6 +15,13 @@
 }
 
 /*=================== Base ===================*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
 
 .relative {
     position: relative;
@@ -57,23 +64,29 @@
     border: 1px solid var(--light-blue);
 }
 
+.title-black {
+    color: var(--black);
+    font-size: 1.8rem;
+}
+
 /* =================== Home ===================*/
 
 .grid-home {
-    grid-template-areas:    'nav    nav    nav    nav    nav'
-                            'slider slider slider slider slider'
-                            'main   main   main   main   sidebar'
-                            'footer footer footer footer footer'
-    ;
+    display: grid;
+    grid-template-areas:    'header header header'
+                            'main   main   sidebar'
+                            'footer footer footer'
+    ; 
+    grid-template-columns: 1fr 1fr .8fr ;
 }
 
-
-.header .nav {
-    grid-area: nav;
+.header {
+    grid-area: header;
+    height: 100vh;
 }
 
 .header .nav .logo {
-    width: 20rem;
+    width: 15rem;
 }
 
 .header .nav ul {
@@ -84,7 +97,7 @@
 
 .header .nav ul .nav-item {
     margin: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
 
     transition: var(--transition);
@@ -95,12 +108,7 @@
 }
 
 .header .nav ul .nav-item a {
-    text-decoration: none;
     color: var(--black);
-}
-
-.header .slider {
-    grid-area: slider;
 }
 
 .header .slider .slider-item-description {
@@ -118,4 +126,127 @@
     color: white;
     font-weight: 600;
     font-size: 2rem;
+}
+
+.home-main {
+    grid-area: main;
+}
+
+.home-main .home-title {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.home-main .home-movie-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat( 3, 1fr );
+}
+
+
+.home-main .home-movie-container .home-movie img {
+    width: 100%;
+}
+
+.home-main .home-movie-container .home-movie .text-container {
+    bottom: 15%;
+    left: 10%;
+}
+
+.home-main .home-movie-container .home-movie .text-container .season {
+    color: var(--light-blue);
+    font-weight: 700;
+    margin: 0;
+}
+
+.home-main .home-movie-container .home-movie .text-container .title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.sidebar .ad {
+    text-align: center;
+}
+
+.sidebar .ad .sidebar-ad-text {
+    font-style: italic;
+}
+
+.sidebar .ad img {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* =================== Footer ===================*/
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 4rem;
+    background: var(--footer-background);
+}
+
+.footer * {
+    color:white;
+    margin: .5rem;
+}
+
+.footer img {
+    width: 20%;
+}
+
+.footer .redes {
+    font-size: 1.5rem;
+}
+
+
+.footer .redes a i {
+    transition: var(--transition);
+}
+
+.footer .redes a i:hover {
+    transform: scale(1.2);
+}
+
+/* =================== Cartelera ===================*/
+
+.header-cartelera {
+    background: url(../assets/cartelera/showcase-background.png);
+}
+
+.header-cartelera .nav ul .nav-item a {
+    color: white;
+}
+
+.showcase-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.showcase-text-container > * {
+    margin: 2rem 0;
+    color: white;
+}
+
+.showcase-text-container .showcase-title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.showcase-text-container .showcase-desc {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
 }
