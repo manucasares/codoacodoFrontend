@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 @import url('./normalize.css');
-@import url('./nav-footer.css');
 
 :root {
     --transition: all .3s ease;
@@ -112,7 +111,8 @@ figure {
     margin: 1.3rem 0;
 }
 
-.input-container > :is(p, label):first-child {
+.input-container > :is(p, label):first-child,
+.precio-parrafo-total {
     display: block;
     margin: 1.2rem 0 .75rem;
     color: var(--light-text);
@@ -149,6 +149,70 @@ figure {
     border: 1px solid var(--purple);
     color: var(--purple);
 }
+
+/* =================== Nav ===================*/
+
+.header .nav {
+    height: var(--nav-height);
+}
+
+.header .nav .logo {
+    width: 15rem;
+}
+
+.header .nav ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.header .nav ul .nav-item {
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.header .nav ul .nav-item:hover {
+    transform: scale(1.1);
+}
+
+.header .nav ul .nav-item a {
+    color: var(--black);
+}
+
+/* =================== Footer ===================*/
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 4rem;
+    background: var(--footer-background);
+}
+
+.footer * {
+    color:white;
+    margin: .5rem;
+}
+
+.footer img {
+    width: 20%;
+}
+
+.footer .redes {
+    font-size: 1.5rem;
+}
+
+
+.footer .redes a i {
+    transition: var(--transition);
+}
+
+.footer .redes a i:hover {
+    transform: scale(1.2);
+}
+
 /* =================== Home ===================*/
 
 .grid-home {
@@ -454,4 +518,30 @@ figure {
 [type=radio]:checked + .horario {
     background: var(--purple);
     color: white;
+}
+
+.precio-parrafo-total {
+    width: 100%;
+}
+
+#precio_total {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-left: 1rem;
+}
+
+.redirect {
+    width: 50%;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(81, 36, 102, .8);
+    border-radius: 3px 3px 0 0;
+    bottom: -85px;
+
+    transition: var(--transition);
 }

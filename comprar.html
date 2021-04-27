@@ -48,7 +48,7 @@
 
                 <div class="input-container">
                     <label for="entradas">Cantidad de Entradas</label>
-                    <input type="number" class="input" id="entradas" min="0" max="10" required>
+                    <input type="number" value="1" class="input" id="entradas" min="1" max="10" required>
                 </div>
                 
                 <div class="options">
@@ -123,11 +123,14 @@
                     <input type="text" class="input" id="dni" required>
                 </div>
 
+                 <p class="precio-parrafo-total">Precio Total: <span id="precio_total">$250</span></p>
+
             </section>
 
-            <button type="submit" class="btn-form"> Enviar </button>
-
+            <button type="submit" class="btn-form" id="btn_comprar"> Comprar </button>
         </form>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2389.65017268931!2d-58.50464605189696!3d-34.622652159849906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1619530289354!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </main>
     
     
@@ -141,5 +144,10 @@
         <p>Moonlight® y la experiencia Moonlight son marcas de Moonlight Corporation.</p>
         <img src="./assets/light-logo.svg" alt="Moonlight logo">
     </footer>
+
+    <div class="redirect" id="redirect"> 
+        <p>Ticket comprado exitosamente.</p>
+        <p>Será redireccionado en 3 segundos...</p> 
+    </div>
 </body>
 </html>
