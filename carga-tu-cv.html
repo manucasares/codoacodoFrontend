@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fc369b8969.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Moonlight Cinema</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav flex-between container">
+            <img class="logo" src="./assets/dark-logo.png" alt="moonlight cinema logo">
+            <ul>
+                <li class="nav-item"><a href="./home.html">Home</a></li>
+                <li class="nav-item"><a href="./cartelera.html">Cartelera</a></li>
+                <li class="nav-item"><a href="./precios.html">Precios</a></li>
+                <li class="nav-item"><a href="./carga-tu-cv.html">Carga tu CV</a></li>
+            </ul>
+        </nav>
+
+        <div class="showcase-carga">
+            <h2>¿Buscas un empleo diferente?</h2>
+            <p>Si crees que podés formar parte de nuestro equipo no dudes en animarte a ser parte.</p>
+        </div>
+
+    </header>
+    
+
+    <main class="main container">
+        <form class="form" actiom="#">
+            <section class="form-section flex-between">
+                <h3 class="form-section-name">Datos personales</h3>
+                
+                
+                <div class="input-container">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="input" id="nombre" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="input" id="apellido" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" class="input" id="nacimiento" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="correo">Correo</label>
+                    <input type="email" class="input" id="correo" required>
+                </div>
+
+                <div class="input-container">
+                    <p>Genero</p>
+                    <input type="radio" name="genero" id="masculino" checked><label class="radio-label" for="masculino">Masculino</label>
+                    <input type="radio" name="genero" id="femenino"><label class="radio-label" for="femenino">Femenino</label>
+                    <input type="radio" name="genero" id="otro"><label class="radio-label" for="otro">Otro</label>
+                </div>
+                
+                <div class="input-container">
+                    <p>Hijos</p>
+                    <input type="radio" name="hijos" id="si"><label class="radio-label" for="si">Si</label>
+                    <input type="radio" name="hijos" id="no" checked><label class="radio-label" for="no">No</label>
+                </div>
+
+                <div class="input-container">
+                    <label for="estado_civil">Estado Civil</label>
+                    <select class="select" id="estado_civil">
+                        <option value="soltero">Soltera/o</option>
+                        <option value="casado">Casada/o</option>
+                        <option value="divorciado">Divorciada/o</option>
+                        <option value="viudo">Viuda/o</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="nacionalidad">Nacionalidad</label>
+                    <select class="select" id="nacionalidad">
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chilena">Chilena</option>
+                        <option value="Uruguaya">Uruguaya</option>
+                        <option value="Mexicana">Mexicana</option>
+                        <option value="Boliviana">Boliviana</option>
+                        <option value="Paraguaya">Paraguaya</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="celular">Celular</label>
+                    <input type="tel" class="input" id="celular" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="input" id="dni" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="cuil">CUIL</label>
+                    <input type="text" class="input" id="cuil" required>
+                </div>
+            </section>
+
+            <section class="form-section flex-between">
+                <h3 class="form-section-name">Experiencia Laboral</h3>
+                
+                
+                <div class="input-container">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" class="input" id="empresa" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="rubro">Rubro</label>
+                    <input type="text" class="input" id="rubro" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="puesto">Puesto</label>
+                    <input type="text" class="input" id="puesto" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="area">Area de desempeño</label>
+                    <select class="select" id="area">
+                        <option value="gastronomia" selected>--Seleccionar--</option>
+                        <option value="gastronomia">GASTRONOMIA Y TURISMO</option>
+                        <option value="oficios">OFICIOS Y OTROS</option>
+                        <option value="legales">LEGALES</option>
+                        <option value="ingeniería">INGENIERÍA</option>
+                        <option value="seguros">SEGUROS</option>
+                        <option value="diseño">DISEÑO</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="nacimiento">Desde</label>
+                    <input type="date" class="input" id="desde" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="nacimiento">Hasta</label>
+                    <input type="date" class="input" id="hasta" required>
+                </div>
+            </section>
+
+            <section class="form-section flex-between">
+                <h3 class="form-section-name">Estudios</h3>
+                
+                <div class="input-container">
+                    <label for="nivel">Nivel de Estudios</label>
+                    <select class="select" id="nivel">
+                        <option value="" selected>--Seleccionar--</option>
+                        <option value="primario">Primario</option>
+                        <option value="secundario">Secundario</option>
+                        <option value="terciario">Terciario</option>
+                        <option value="universitario">Universitario</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="institucion">Institución</label>
+                    <input type="text" class="input" id="institucion" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" class="input" id="titulo" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="area">Estado</label>
+                    <select class="select" id="nivel">
+                        <option value="" selected>--Seleccionar--</option>
+                        <option value="cursando">En curso</option>
+                        <option value="abandonado">Abandonado</option>
+                        <option value="finalizado">Finalizado</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="form-section flex-between">
+                <h3 class="form-section-name">Cargar CV</h3>
+                
+                <div class="input-container">
+                    <input type="file" id="empresa" required>
+                </div>
+
+            </section>
+
+            <button type="submit" class="btn-form"> Enviar </button>
+
+        </form>
+    </main>
+    
+    
+    <footer class="footer">
+        <div class="redes">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>Moonlight® y la experiencia Moonlight son marcas de Moonlight Corporation.</p>
+        <img src="./assets/light-logo.svg" alt="Moonlight logo">
+    </footer>
+</body>
+</html>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 @import url('./normalize.css');
+@import url('./nav-footer.css');
 
 :root {
     --transition: all .3s ease;
@@ -8,21 +9,32 @@
     --light-blue: hsl(207, 100%, 50%);
     --light-text: hsl(225, 18%, 49%);
     --black: hsl(0, 0%, 20%);
+    --nav-height: 5.1rem;
 }
 
 * {
     box-sizing: border-box;
 }
 
-/*=================== Base ===================*/
 body {
     font-family: 'Open Sans', sans-serif;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
+hr {
+    border-color: rgba(0, 0, 0, .15);
+}
+
+figure {
+    margin: 0;
+}
+
+
+/*=================== Base ===================*/
 .relative {
     position: relative;
 }
@@ -41,6 +53,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -67,8 +80,75 @@ a {
 .title-black {
     color: var(--black);
     font-size: 1.8rem;
+    font-weight: 400;
 }
 
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    outline: none;
+    border-radius: 3px;
+}
+
+.select {
+    width: 100%;
+    padding: .4rem 1rem;
+    border-radius: 3px;
+}
+
+.radio-label {
+    margin-right: 1rem;
+    margin-left: .2rem;
+}
+
+.form-section h3 {
+    margin: 1rem 0 0;
+}
+
+
+.input-container {
+    width: 49%;
+    margin: 1.3rem 0;
+}
+
+.input-container > :is(p, label):first-child {
+    display: block;
+    margin: 1.2rem 0 .75rem;
+    color: var(--light-text);
+    font-weight: 600;
+}
+
+.form-section {
+    padding: 1rem 0;
+}
+
+.form-section .form-section-name {
+    color: var(--purple);
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+.btn-form {
+    background: var(--purple);
+    color: white;
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-form:hover {
+    background: white;
+    border: 1px solid var(--purple);
+    color: var(--purple);
+}
 /* =================== Home ===================*/
 
 .grid-home {
@@ -83,32 +163,6 @@ a {
 .header {
     grid-area: header;
     height: 100vh;
-}
-
-.header .nav .logo {
-    width: 15rem;
-}
-
-.header .nav ul {
-    margin: 0;
-    list-style-type: none;
-    display: flex;
-}
-
-.header .nav ul .nav-item {
-    margin: 0 1rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-
-    transition: var(--transition);
-}
-
-.header .nav ul .nav-item:hover {
-    transform: scale(1.1);
-}
-
-.header .nav ul .nav-item a {
-    color: var(--black);
 }
 
 .header .slider .slider-item-description {
@@ -179,44 +233,15 @@ a {
 
 .sidebar .ad .sidebar-ad-text {
     font-style: italic;
+    font-size: .7rem;
 }
 
 .sidebar .ad img {
-    width: 100%;
+    width: 80%;
     object-fit: cover;
     cursor: pointer;
 }
 
-/* =================== Footer ===================*/
-
-.footer {
-    grid-area: footer;
-    text-align: center;
-    padding: 4rem;
-    background: var(--footer-background);
-}
-
-.footer * {
-    color:white;
-    margin: .5rem;
-}
-
-.footer img {
-    width: 20%;
-}
-
-.footer .redes {
-    font-size: 1.5rem;
-}
-
-
-.footer .redes a i {
-    transition: var(--transition);
-}
-
-.footer .redes a i:hover {
-    transform: scale(1.2);
-}
 
 /* =================== Cartelera ===================*/
 
@@ -249,4 +274,184 @@ a {
 .showcase-text-container .showcase-desc {
     font-size: 1.5rem;
     line-height: 2.5rem;
+}
+
+.main-cartelera {
+    padding: 2rem 0;
+}
+
+.main-cartelera .section {
+    margin: 4rem 0;
+}
+
+.main-cartelera .section .movies-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.main-cartelera .section .movies-container .movie {
+    width: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 20.625rem;
+    transition: var(--transition);
+}
+
+.main-cartelera .section .movies-container .movie:hover {
+    transform: scale(1.05);
+}
+
+.main-cartelera .section .movies-container .movie img {
+     width: 100%;
+     margin-bottom: .8rem;
+}
+
+ /* =================== Precios ===================*/
+
+.showcase-precios {
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-precios .section {
+    margin: 2rem 0;
+}
+
+
+.main-precios .section .combos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+    gap: 1.5rem;
+}
+
+.main-precios .section .combos-container .combo {
+    width: 43%;
+}
+
+.main-precios .section .combos-container .combo .combo-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.main-precios .section .combos-container .combo .img-info {
+    display: grid;
+    grid-template-columns: 2.3fr 1fr;
+}
+
+.main-precios .section .combos-container .combo .img-info img {
+    width: 100%;
+    object-fit: contain;
+    height: 13rem;
+}
+
+.main-precios .section .combos-container .combo .img-info .combo-info {
+    background: var(--purple);
+    color: white;
+    text-align: center;
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-precios .section .combos-container .combo .img-info .combo-info .precio {
+    margin: 0;
+}
+
+.main-precios .section .combos-container .combo .img-info .combo-info .desc {
+    line-height: 30px;
+}
+
+
+/* =================== Carga tu CV ===================*/
+
+.header .showcase-carga {
+    height: calc( 100vh - var(--nav-height) );
+    background: url('../assets/cargaTuCV/showcase-background.png') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .showcase-carga :is(h2, p) {
+    margin: 0;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.header .showcase-carga h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+/* =================== Comprar ===================*/
+
+.header-comprar {
+    height: auto;
+}
+
+.form .form-section .figure-container {
+    display: flex;
+    margin: 1rem 0;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.form .form-section .figure-container .figure {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.options {
+    padding: 1rem 0;
+    width: 100%;
+    display:  flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem 2rem;
+}
+
+.options p {
+    width: 100%;
+    margin: 0;
+}
+
+.options [type=radio] {
+    display: none;
+}
+
+.option {
+    background: var(--purple);
+    color: white;
+    padding: .8rem 1.5rem;
+    text-align: center;
+    width: 8%;
+    font-size: .9rem;
+    border: 1px solid var(--purple);
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.option:hover,
+[type=radio]:checked + .option{
+    background: white;
+    color: var(--purple);
+}
+
+.horario {
+    background: white;
+    color: var(--purple);
+}
+
+.horario:hover,
+[type=radio]:checked + .horario {
+    background: var(--purple);
+    color: white;
 }

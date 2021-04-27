@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fc369b8969.js" crossorigin="anonymous"></script>
+    <script src="./script/main.js" defer></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Moonlight Cinema</title>
+</head>
+<body>
+    <header class="header header-comprar">
+        <nav class="nav flex-between container">
+            <img class="logo" src="./assets/dark-logo.png" alt="moonlight cinema logo">
+            <ul>
+                <li class="nav-item"><a href="./home.html">Home</a></li>
+                <li class="nav-item"><a href="./cartelera.html">Cartelera</a></li>
+                <li class="nav-item"><a href="./precios.html">Precios</a></li>
+                <li class="nav-item"><a href="./carga-tu-cv.html">Carga tu CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main class="main container">
+        <form class="form" actiom="#">
+
+            <section class="form-section flex-between">
+                <h3 class="form-section-name">Comprar Ticket</h3>
+                
+                <div class="figure-container">
+                    <figure class="figure">
+                        <img id="movie_image">
+                        <figcaption id="movie_name"></figcaption>
+                    </figure>
+                </div>
+
+                <div class="input-container">
+                    <label for="cine">Seleccione un cine</label>
+                    <select class="select" id="cine">
+                        <option value="mendoza">Cine Mendoza</option>
+                        <option value="tucuman">Cine Tucuman</option>
+                        <option value="caba">Cine CABA</option>
+                        <option value="moron">Cine Morón</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="entradas">Cantidad de Entradas</label>
+                    <input type="number" class="input" id="entradas" min="0" max="10" required>
+                </div>
+                
+                <div class="options">
+                    <input type="radio" name="dias" id="dia1">
+                    <label class="option" for="dia1">
+                        <p>HOY</p>
+                        <p>26/5</p>
+                    </label>
+
+                    <input type="radio" name="dias" id="dia2">
+                    <label class="option" for="dia2">
+                        <p>JUE</p>
+                        <p>27/5</p>
+                    </label>
+
+                    <input type="radio" name="dias" id="dia3">
+                    <label class="option" for="dia3">
+                        <p>VIE</p>
+                        <p>28/5</p>
+                    </label>
+
+                    <input type="radio" name="dias" id="dia4">
+                    <label class="option" for="dia4">
+                        <p>SAB</p>
+                        <p>29/5</p>
+                    </label>
+
+                    <input type="radio" name="dias" id="dia5">
+                    <label class="option" for="dia5">
+                        <p>DOM</p>
+                        <p>30/5</p>
+                    </label>
+                </div>
+
+                <div class="options input-container">
+                    <p>Horarios</p>
+
+                    <input type="radio" name="horarios" id="horario1">
+
+                    <label class="horario option" for="horario1">
+                        <p>16:00</p>
+                    </label>
+
+                    <input type="radio" name="horarios" id="horario2">
+                    <label class="horario option" for="horario2">
+                        <p>17:30</p>
+                    </label>
+
+                    <input type="radio" name="horarios" id="horario3">
+                    <label class="horario option" for="horario3">
+                        <p>19:00</p>
+                    </label>
+
+                    <input type="radio" name="horarios" id="horario4">
+                    <label class="horario option" for="horario4">
+                        <p>21:12</p>
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="input" id="nombre" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="input" id="apellido" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="input" id="dni" required>
+                </div>
+
+            </section>
+
+            <button type="submit" class="btn-form"> Enviar </button>
+
+        </form>
+    </main>
+    
+    
+    <footer class="footer">
+        <div class="redes">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>Moonlight® y la experiencia Moonlight son marcas de Moonlight Corporation.</p>
+        <img src="./assets/light-logo.svg" alt="Moonlight logo">
+    </footer>
+</body>
+</html>
