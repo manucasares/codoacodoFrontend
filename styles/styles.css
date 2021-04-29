@@ -33,7 +33,6 @@ figure {
     margin: 0;
 }
 
-
 /*=================== Base ===================*/
 .relative {
     position: relative;
@@ -434,7 +433,6 @@ figure {
     width: 8%;
     font-size: .9rem;
     border: 1px solid var(--purple);
-
     cursor: pointer;
     transition: var(--transition);
 }
@@ -455,3 +453,5 @@ figure {
     background: var(--purple);
     color: white;
 }
+
+
