@@ -32,6 +32,10 @@ figure {
     margin: 0;
 }
 
+iframe {
+    width: 100%;
+}
+
 /*=================== Base ===================*/
 .relative {
     position: relative;
@@ -436,6 +440,11 @@ figure {
     flex-direction: column;
 }
 
+.header .showcase-carga .showcase-text {
+    text-align: center;
+    width: min(50rem, 70%);
+}
+
 .header .showcase-carga :is(h2, p) {
     margin: 0;
     color: white;
@@ -488,7 +497,7 @@ figure {
     color: white;
     padding: .8rem 1.5rem;
     text-align: center;
-    width: 8%;
+    width: max(8%, auto);
     font-size: .9rem;
     border: 1px solid var(--purple);
     cursor: pointer;
@@ -566,7 +575,12 @@ figure {
     html {
         font-size: 12px;
     }
+    /* =================== Base ===================*/
+    .input-container {
+        width: 100%;
+    }
 
+    /* =================== Navbar ===================*/
     .header .nav i {
         display: inline;
         color: white;
@@ -624,6 +638,7 @@ figure {
         font-size: 1.3rem;
     }
 
+    /* =================== Home ===================*/
     .home-main .home-movie-container {
         display: grid;
         grid-template-columns: 1fr;
