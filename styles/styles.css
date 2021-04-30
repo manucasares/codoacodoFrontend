@@ -65,7 +65,6 @@ figure {
     background-color: var(--light-blue);
     color: white;
     padding: .5rem 1.4rem;
-
     transition: var(--transition);
 }
 
@@ -138,7 +137,6 @@ figure {
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 2rem;
-
     cursor: pointer;
     transition: var(--transition);
 }
@@ -175,7 +173,6 @@ figure {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--black);
-
     transition: var(--transition);
 }
 
@@ -204,7 +201,6 @@ figure {
 .footer .redes {
     font-size: 1.5rem;
 }
-
 
 .footer .redes a i {
     transition: var(--transition);
@@ -261,7 +257,6 @@ figure {
     grid-template-rows: repeat( 3, 1fr );
 }
 
-
 .home-main .home-movie-container .home-movie img {
     width: 100%;
 }
@@ -285,10 +280,9 @@ figure {
 
 .sidebar {
     grid-area: sidebar;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: stretch;
     padding: 1.5rem;
 }
 
@@ -305,8 +299,8 @@ figure {
     width: 80%;
     object-fit: cover;
     cursor: pointer;
+    filter: opacity(.8);
 }
-
 
 /* =================== Cartelera ===================*/
 
@@ -390,12 +384,11 @@ figure {
     margin: 2rem 0;
 }
 
-
 .main-precios .section .combos-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     gap: 1.5rem;
 }
 
@@ -424,9 +417,7 @@ figure {
     color: white;
     text-align: center;
     padding: .5rem 1rem;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .main-precios .section .combos-container .combo .img-info .combo-info .precio {
@@ -437,16 +428,12 @@ figure {
     line-height: 30px;
 }
 
-
 /* =================== Carga tu CV ===================*/
 
 .header .showcase-carga {
     height: calc( 100vh - var(--nav-height) );
     background: url('../assets/cargaTuCV/showcase-background.png') no-repeat center center / cover;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .header .showcase-carga :is(h2, p) {
@@ -547,7 +534,6 @@ figure {
     background: rgba(81, 36, 102, .8);
     border-radius: 3px 3px 0 0;
     bottom: -85px;
-
     transition: var(--transition);
 }
 
@@ -589,7 +575,6 @@ figure {
     }
 
     .header .nav .fa-times {
-        position: absolute;
         top: 15px;
         right: 15px;
     }
@@ -614,18 +599,18 @@ figure {
     }
 
     .header .nav .checkbox:checked ~ ul {
-        left: 0;
-        top: 0;
-        background-color: rgba(81, 36, 102, .96);
-        height: 100vh;
-        width: 40%;
-        z-index: 1000;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        left: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
         padding: 0;
+        background-color: rgba(81, 36, 102, .96);
         transition: var(--transition);
         transform: scale(1, 1);
+        z-index: 1000;
     }
 
     .header .nav .checkbox:checked ~ ul > * {
@@ -697,11 +682,10 @@ figure {
 
     .main-cartelera .section .movies-container {
         justify-content: center;
-     }
+    }
 
     .main-cartelera .section .movies-container .movie {
         width: 51%;
         margin-right: 0;
     }
-
 }
