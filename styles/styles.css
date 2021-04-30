@@ -648,7 +648,19 @@ figure {
     }
     
     /* =================== Precios ===================*/
+    .main-precios .section .combos-container .combo .img-info {
+        grid-template-columns: 1fr;
+    }
+
+    .main-precios .section .combos-container .combo .img-info .combo-info {
+        padding: 1.5rem 0;
+    }
+
     .main-precios .section .combos-container .combo .img-info .combo-info .desc {
+        margin-bottom: 0;
+    }
+
+    .br-responsive {
         display: none;
     }
 
@@ -687,5 +699,11 @@ figure {
     .main-cartelera .section .movies-container .movie {
         width: 51%;
         margin-right: 0;
+    }
+
+     /* =================== Precios ===================*/
+
+    .main-precios .section .combos-container .combo {
+        width: 100%;
     }
 }
